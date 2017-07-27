@@ -4,7 +4,7 @@ project(zint_frontend)
 
 set(zint_frontend_SRCS main.c )
 
-include_directories(BEFORE "${CMAKE_SOURCE_DIR}/backend")
+include_directories(BEFORE "${CMAKE_CURRENT_SOURCE_DIR}/../backend")
 
 add_executable(zint_frontend ${zint_frontend_SRCS})
 
