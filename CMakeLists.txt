@@ -21,14 +21,18 @@ include (SetPaths.cmake)
 
 INCLUDE (CheckCXXCompilerFlag)
 
-if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_GNUCC)
-    check_cxx_compiler_flag("-Wall" CXX_COMPILER_FLAG_WALL)
-    if (CXX_COMPILER_FLAG_WALL)
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
-    endif (CXX_COMPILER_FLAG_WALL)
+#if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_GNUCC)
+    #check_cxx_compiler_flag("-Wall" CXX_COMPILER_FLAG_WALL)
+    #if (CXX_COMPILER_FLAG_WALL)
+        #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+    #endif (CXX_COMPILER_FLAG_WALL)
 
-    SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
-endif (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_GNUCC)
+    #SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
+#endif (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_GNUCC)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-misleading-indentation")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-but-set-variable")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-misleading-indentation")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-but-set-variable")
 
 IF(APPLE)
     IF (UNIVERSAL) # TODO: make univeral binary
