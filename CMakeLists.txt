@@ -35,7 +35,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-memset-elt-size")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-misleading-indentation")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-but-set-variable")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-memset-elt-size")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-alloc-size-larger-than")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-maybe-uninitialized")
 
 IF(APPLE)
